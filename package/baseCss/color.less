@@ -1,0 +1,57 @@
+@gray: #b1b1b1;
+@orange: #f39800;
+@sky-blue: #38adff;
+@light-red: #fc5d5d;
+@red: #f00;
+@light-green: #32b16c;
+@aquamarine: #7fffd4;
+@white: #fff;
+@blue: #1200ff;
+
+@theme: #333;
+@font: #666;
+@subfont: #888;
+@disabled: #bbb;
+@primary: #38adff;
+@error: #f4333c;
+@warn: #ffd9a0;
+@border: #dcdfe6;
+@floor: #f0f0f0;
+@hover: #ecf5ff;
+@float: rgba(0,0,0, 0.75);
+@mask: rgba(0, 0, 0, 0.25);
+
+.create(@name) {
+  .bg-@{name} {
+    background-color: @@name;
+  }
+  .color-@{name} {
+    color: @@name;
+  }
+  .border-@{name} {
+    border-color: @@name;
+  }
+}
+//颜色命名
+.create(gray);
+.create(orange);
+.create(sky-blue);
+.create(light-red);
+.create(red);
+.create(light-green);
+.create(aquamarine);
+.create(white);
+.create(blue);
+//功能命名
+.create(theme);
+.create(font);
+.create(subfont);
+.create(disabled);
+.create(primary);
+.create(error);
+.create(warn);
+.create(border);
+.create(floor);
+.create(hover);
+.create(float);
+.create(mask);

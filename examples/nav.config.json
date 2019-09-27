@@ -1,0 +1,230 @@
+{
+  "zh-CN": {
+    "component": [
+      {
+        "name": "开发指南",
+        "children": [
+          {
+            "path": "/installation",
+            "name": "installation",
+            "title": "安装"
+          }
+        ]
+      },
+      {
+        "name": "组件",
+        "groups": [
+          {
+            "groupName": "主题",
+            "list": [
+              {
+                "path": "/djColor",
+                "title": "Color 色彩"
+              },
+              {
+                "path": "/djfont",
+                "title": "Typography 字体"
+              },
+              {
+                "path": "/Button",
+                "title": "Button 按钮"
+              },
+              {
+                "path": "/djIcon",
+                "title": "Icon 图标"
+              }
+            ]
+          },
+          {
+            "groupName": "controls",
+            "list": [
+              {
+                "path": "/djInput",
+                "title": "djInput 输入框"
+              },
+              {
+                "path": "/djSelect",
+                "title": "djSelect 选择框"
+              },
+              {
+                "path": "/djSwitch",
+                "title": "djSwitch 开关"
+              },
+              {
+                "path": "/djCheckBox",
+                "title": "djCheckBox 多选框"
+              },
+              {
+                "path": "/djRadio",
+                "title": "djRadio 单选框"
+              },
+              {
+                "path": "/djTimePicker",
+                "title": "djTimePicker 时间选择器"
+              },
+              {
+                "path": "/djCascader",
+                "title": "djCascader 联级选择器"
+              }
+            ]
+          },
+          {
+            "groupName": "Basic",
+            "list": [
+              {
+                "path": "/baseTable",
+                "title": "baseTable 基础表格"
+              },
+              {
+                "path": "/djTable",
+                "title": "djTable 封装表格"
+              },
+              {
+                "path": "/djPaging",
+                "title": "djPaging 分页组件"
+              },
+              {
+                "path": "/djButton",
+                "title": "djButton 按钮"
+              },
+              {
+                "path": "/djSearch",
+                "title": "djSearch 搜索组件"
+              },
+              {
+                "path": "/djPicturePreview",
+                "title": "djPicturePreview 图片预览"
+              },
+              {
+                "path": "/djMenu",
+                "title": "djMenu 菜单"
+              },
+              {
+                "path": "/djDialog",
+                "title": "djDialog 弹框"
+              },
+              {
+                "path": "/djForm",
+                "title": "djForm 表单"
+              },
+              {
+                "path": "/djMultipleCheckbox",
+                "title": "djMultipleCheckbox 联级复选框"
+              }
+            ]
+          },
+          {
+            "groupName": "Box",
+            "list": [
+              {
+                "path": "/djScrollBox",
+                "title": "djScrollBox 自定义滚动条容器"
+              },
+              {
+                "path": "/djWaterfallBox",
+                "title": "djWaterfallBox 瀑布流布局容器"
+              },
+              {
+                "path": "/djContentBox",
+                "title": "djContentBox 内容容器"
+              },
+              {
+                "path": "/djItemBox",
+                "title": "djItemBox 输入块容器"
+              },
+              {
+                "path": "/djSelectBox",
+                "title": "djSelectBox 内容容器"
+              },
+              {
+                "path": "/djGridBox",
+                "title": "djGridBox 栅格布局容器"
+              },
+              {
+                "path": "/djCollapseTransition",
+                "title": "djCollapseTransition 展开折叠(横向)"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "function": [
+      {
+        "name": "开发指南",
+        "children": [
+          {
+            "path": "/import",
+            "name": "import",
+            "title": "引入"
+          }
+        ]
+      },
+      {
+        "name": "方法",
+        "groups": [
+          {
+            "groupName": "methods",
+            "list": [
+              {
+                "path": "/httpFactory",
+                "title": "httpFactory http请求方法"
+              },
+              {
+                "path": "/permission",
+                "title": "permission 路由权限守卫"
+              },
+              {
+                "path": "/DjStore",
+                "title": "DjStore 封装Vuex"
+              },
+              {
+                "path": "/utils",
+                "title": "utils 公用方法"
+              }
+            ]
+          },
+          {
+            "groupName": "mixins",
+            "list": [
+              {
+                "path": "/httpPolicy",
+                "title": "httpPolicy 请求取消策略"
+              },
+              {
+                "path": "/listenerPolicy",
+                "title": "listenerPolicy 事件监听策略"
+              },
+              {
+                "path": "/renderBase",
+                "title": "renderBase"
+              }
+            ]
+          },
+          {
+            "groupName": "customClass",
+            "list": [
+              {
+                "path": "/Subject",
+                "title": "Subject 订阅监听"
+              },
+              {
+                "path": "/Websocket",
+                "title": "Websocket 封装WebSocket"
+              }
+            ]
+          },
+          {
+            "groupName": "css",
+            "list": [
+              {
+                "path": "/baseCss",
+                "title": "baseCss 基础样式"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

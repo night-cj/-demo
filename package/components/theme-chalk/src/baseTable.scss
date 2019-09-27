@@ -1,0 +1,122 @@
+@import "mixins/mixins";
+@import "common/var";
+.base-table__wrap .el-table__body {
+  width: $--baseTable-elTableBody-width;
+}
+@include block(base-table) {
+  &.table-container {
+    @include setPosition(relative);
+    width: $--baseTable-TContainer-width;
+    text-align: left;
+
+    @include el(el-table) {
+      @include eMixin(body-wrapper, '__') {
+        display: inline-block;
+        float: left;
+        @include size($--baseTable-bodyWrapper-width,null,null,null,null,$--baseTable-bodyWrapper-minWidth);
+        .el-table__empty-text {
+          display: block;
+          min-height: $--baseTable-empty-min-height;
+          line-height: $--baseTable-empty-text-line-height;
+        }
+      }
+      .el-loading-mask {
+        z-index: 10;
+      }
+    }
+    @include el(suffix-container) {
+      padding: 0;
+      line-height: $--baseTable-suffix-container-line-height;
+      div {
+        line-height: $--baseTable-suffix-container-line-height;
+      }
+    }
+    @include el(td-btn-group) {
+      color: $--baseTable-btnGroup-color;
+     a {
+        color: $--baseTable-btnGroup-color;
+        cursor: pointer;
+       &:focus {
+         color: $--baseTable-btnGroup-color;
+       }
+
+       &:hover {
+         color: #526df6;
+       }
+       &:active {
+         color: $--color-active;
+       }
+      }
+      a + span:empty::before {
+        margin: 0 9px;
+        color: $--baseTable-btnGroup-delimiter-color;
+        content: '|';
+      }
+      a.disabled {
+        color: $--baseTable-btnGroup-link-disabled-color;
+        cursor: not-allowed;
+      }
+      a.danger {
+        color: $--baseTable-btnGroup-link-danger-color;
+        &:focus {
+          color: $--baseTable-btnGroup-link-danger-color;
+        }
+        &:hover {
+          color: $--color-danger-hover;
+        }
+        &:active {
+          color: $--color-danger-active;
+        }
+      }
+    }
+    @include el(el-table__empty-text) {
+      line-height: normal;
+      @include box-center(center, center);
+      @include setCommon(20px);
+      .dj-common-Nodata {
+        margin-right: 10px;
+        @include setCommon(25px);
+      }
+    }
+    @include el(tip-txt) {
+      display: inline-block;
+      @include size ($--baseTable-tipTxt-width,$--baseTable-tipTxt-height);
+      @include setCommon(null,$--baseTable-tipTxt-height,$--baseTable-tipTxt-color,center);
+      border-radius: $--baseTable-tipTxt-border-radius;
+    }
+    .tip-txt + .tip-txt {
+      margin-left: 5px;
+    }
+    @include mod(header) {
+      @include el(gutter) {
+        border-bottom: $--border-base;
+      }
+    }
+    @include el(drag-hover) {
+      td {
+        border-top: $--baseTable-drag-border;
+      }
+    }
+    @include el(drag-last-hover) {
+      td {
+        border-bottom: $--baseTable-drag-border;
+      }
+    }
+    @include el(multiple-row) {
+      td, &.hover-row td {
+        background: $--dj-background-base-hover;
+      }
+    }
+  }
+}
+@include block(djtable-scroll) {
+  @include setPosition(absolute,bottom 0, 222);
+  width: $--baseTable-scroll-width;
+  overflow-x: auto;
+  overflow-y: hidden;
+  visibility: hidden;
+}
+.djtable-scroll-fixed {
+  position: fixed;
+  visibility: visible;
+}

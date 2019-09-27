@@ -1,0 +1,73 @@
+@import "mixins/mixins";
+@import "common/var";
+@include block(dj-table-container) {
+  @include setPosition(relative, null);
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.dj-table-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  .over-table {
+    margin-bottom: 16px;
+    .right-item {
+      @include box-center(center);
+    }
+    .left-item {
+      display: inline-block;
+      margin-bottom: 2px;
+      .el-button {
+        @include size(112px,36px);
+        padding: 0 8px;
+      }
+      .el-button + .el-button {
+        margin-left: 8px;
+      }
+    }
+  }
+  .under-table {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .set-button {
+    @include setPosition(absolute,right -14px top 27px, 1);
+    transform: translate3d(-50%, -50%, 0);
+    background: #fafafa;
+    padding-right: 8px;
+    height: 54px;
+    line-height: 57px;
+    text-align: center;
+  }
+}
+.set-icon {
+  font-size: 20px;
+  color: #606266;
+}
+.set-icon:hover {
+  cursor: pointer;
+  /*color: #409EFF;*/
+  animation: rotate 3s infinite linear;
+}
+.button-wrap {
+  margin-top: 10px;
+  text-align: center;
+}
+.dj-table-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  max-height: 200px;
+  min-width: 150px;
+  overflow-y: auto;
+  .el-checkbox + .el-checkbox {
+    margin-left: 0;
+  }
+}

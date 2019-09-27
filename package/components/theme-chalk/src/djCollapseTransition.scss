@@ -1,0 +1,9 @@
+@import "mixins/mixins";
+@import "common/var";
+@include block(dj-collapse-transition){
+  display: inline-block;
+  height: 100%;
+  overflow: hidden;
+  vertical-align: top;
+  transition: all 0.3s;
+}

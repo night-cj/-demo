@@ -1,0 +1,202 @@
+// 去掉下拉列容器的箭头
+//.el-popper .popper__arrow {
+//  // display: none;
+//}
+
+// 消息错误提示的背景色
+//.el-message--error {
+//  background-color: #fff5f5;
+//}
+
+// 消息提示文字行高
+//.el-message__content {
+//  line-height: 25px;
+//}
+
+// 菜单项非激活状态i元素图标颜色，包括自定义图标和组件下拉箭头图标
+//.el-menu-item, .el-submenu__title {
+//  i {
+//    color: #fff;
+//  }
+//}
+
+// 除圆形按钮，其他按钮默认固定高度和最小宽度等配置
+//.el-button.btn-default {
+//  height: 34px;
+//  min-width: 90px;
+//  padding: 0 12px;
+//  line-height: 34px;
+//  text-align: center;
+//}
+//.el-input input {
+//  padding: 0 10px;
+//  // font-size: 12px;
+//}
+
+//统一输入框默认高度34px
+//.el-input__inner {
+//  height: 34px;
+//  line-height: 34px;
+//  .el-range__icon, .el-range-separator {
+//    line-height: 26px;
+//  }
+//}
+//.el-pagination .el-select .el-input .el-input__inner {
+//  height: 32px;
+//}
+/**
+ *重写el-select的输入框样式,为了兼容ie10早期版本
+ */
+//.el-form-item.is-success .el-input--suffix {
+//  /* form校验成功的绿色边框 */
+//  border-color: #67c23a;
+//}
+/* form校验成功的红色边框 */
+//.el-form-item.is-error .el-input--suffix {
+//  border-color: #f56c6c;
+//}
+//.el-select {
+//  width: 100%;
+//  line-height: normal;
+//  .el-input--suffix {
+//    display: inline-block;
+//    width: 100%;
+//    padding: 0 30px 0 10px;
+//    // font-size: inherit;
+//    color: #606266;
+//    background-color: #fff;
+//    background-image: none;
+//    border: 1px solid #dcdfe6;
+//    border-radius: 4px;
+//    outline: 0;
+//    box-sizing: border-box;
+//    transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+//    &:hover {
+//      border: 1px solid #3654ea;
+//    }
+//    &.is-disabled {
+//      cursor: not-allowed;
+//      background: #f6f7fc;
+//      .el-input__inner {
+//        background: #f6f7fc;
+//      }
+//    }
+//  }
+//  .el-input__inner {
+//    height: 32px;
+//    padding: 0 !important;
+//    line-height: 32px;
+//    border: none;
+//    box-sizing: content-box;
+//  }
+//}
+//.fixed-input-height {
+//  .el-input__inner {
+//    /* 没有important地址选择框的高度会变成40px */
+//    height: 34px !important;
+//    line-height: 34px !important;
+//  }
+//  .el-select .el-input__inner {
+//    /* 没有important地址选择框的高度会变成40px */
+//    height: 32px !important;
+//    line-height: 32px !important;
+//  }
+//}
+/* 为了配合el-input的高度 */
+//.el-form-item__content,
+//.el-form-item__label {
+//  line-height: 34px;
+//}
+//.el-tabs__header {
+//  margin: 0;
+//}
+//.el-input__icon {
+//  line-height: inherit;
+//}
+// 选择下拉框文本不能被选择
+//.el-select-dropdown__item span {
+//  user-select: none;
+//}
+//.el-textarea__inner {
+//  padding: 5px 10px;
+//  font-family: Arial;
+//  // font-size: 12px;
+//  resize: none;
+//}
+//.el-date-editor .el-range-input {
+//  font-size: 12px;
+//}
+// 多选框置灰时的背景色
+//.el-checkbox.is-disabled .el-checkbox__inner {
+//  background-color: #aaa;
+//}
+//开放多选且合并多选时，select框内容超出时显示省略号
+.select-ellipsis-multi-col {
+  .el-select__tags {
+    > span {
+      display: flex;
+      width: 100%;
+      .el-tag:nth-of-type(1) {
+        display: flex;
+        overflow: hidden;
+        .el-select__tags-text {
+          display: inline-block;
+          width: auto;
+          flex: 1 1;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+      .el-tag:nth-of-type(2) {
+        flex-shrink: 0;
+      }
+    }
+  }
+  .el-tag__close.el-icon-close {
+    top: 5px;
+  }
+}
+//开放多选时,select框内容超出时显示省略号
+.select-ellipsis-multi {
+  /* 防止内容溢出 */
+  .el-select__tags {
+    > span {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+    }
+    .el-tag--info {
+      position: relative;
+      max-width: calc(100% - 6px);
+      padding-right: 26px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .el-tag__close {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+  }
+}
+// 弹窗遮罩层，无横向滚动条
+//.el-dialog__wrapper {
+//  overflow-x: hidden;
+//}
+/* 兼容ie，ie不支持initial属性 */
+//.el-dialog--center {
+//  text-align: inherit;
+//  .el-dialog__footer,
+//  .el-dialog__header {
+//    text-align: center;
+//  }
+//}
+
+// 避免base-table计算列宽时产生的异常
+//.el-radio-group {
+//  display: block;
+//}
+//.el-loading-mask:not(.is-fullscreen) {
+//  z-index: 10;
+//}

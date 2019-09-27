@@ -1,0 +1,90 @@
+@import "mixins/mixins";
+@import "common/var";
+@mixin setCommon($fontSize, $lineHeight, $color,$textAlign) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  color: $color;
+  text-align: $textAlign;
+}
+@include block(dj-multiple-checkbox) {
+  @include size(null,null, null,280px);
+  margin-bottom: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+  @include el(loading) {
+    @include size(100%,100%);
+  }
+  > div {
+    float: left;
+    @include size(50%);
+    overflow: hidden;
+  }
+  .left-box-title {
+    @include size(null, 40px);
+    @include setCommon($--djMultipleCheckbox-title-font,40px,$--djMultipleCheckbox-title-color,center);
+    font-weight: bold;
+    background: #fafafa;
+  }
+  .parent-list {
+    float: left;
+    border-top: $--djMultipleCheckbox-border;
+    border-left: $--djMultipleCheckbox-border;
+  }
+  ul {
+    @include size(100%,240px);
+    overflow: auto;
+    border-right: $--djMultipleCheckbox-border;
+    border-bottom: $--djMultipleCheckbox-border;
+    li {
+      @include size(null, 32px);
+      @include setCommon(14px,32px,#606266,left);
+      padding-left: 12px;
+      overflow: hidden;
+      cursor: default;
+      &:hover, &.active {
+        background-color: $--djMultipleCheckbox-hover;
+      }
+    }
+  }
+  @include el(base-table) {
+    @include block(el-table) {
+      &::after {
+        @include setPosition(absolute,right 0 bottom 0,1);
+        @include size(1px, 100%);
+        background-color: $--djMultipleCheckbox-elTable-bgColor;
+        content: '';
+      }
+      &::before {
+        background-color: $--djMultipleCheckbox-elTable-bgColor;
+      }
+      @include eMixin(fixed, '__') {
+        &::before {
+          @extend .el-table::before;
+        }
+      }
+      @include mod(header) {
+        height: 41px;
+      }
+      th {
+        @include size(null,41px);
+        padding: 0;
+        font-size: $--djMultipleCheckbox-title-font;
+        text-align: center;
+        &:first-child .cell {
+          visibility: hidden;
+        }
+      }
+      td {
+        height: 32px;
+        padding: 0;
+      }
+      tr td {
+        font-size: $--djMultipleCheckbox-elTable-td-font;
+        color: $--djMultipleCheckbox-elTable-td-color;
+      }
+      .el-table__row {
+        cursor: pointer;
+      }
+    }
+  }
+}

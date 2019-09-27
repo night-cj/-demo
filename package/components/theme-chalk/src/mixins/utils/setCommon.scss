@@ -1,0 +1,6 @@
+@mixin setCommon($fontSize: null, $lineHeight: null, $color: null,$textAlign: null) {
+  @if ($fontSize!="" & & $fontSize!=null) { font-size: $fontSize; }
+  @if ($lineHeight!="" & & $lineHeight!=null) { line-height: $lineHeight; }
+  @if ($color!="" & & $color!=null) { color: $color; }
+  @if ($textAlign!="" & & $textAlign!=null) { text-align: $textAlign; }
+}

@@ -1,0 +1,14 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include block(dj-waterfall-box) {
+  width: 100%;
+  @include mod(column) {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: top;
+  }
+  @include mod(item-wrap) {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,240 @@
+@import "common/var";
+
+@font-face {font-family: "dj-common-";
+  src: url('#{$--font-path}/iconfont.woff') format('woff'),
+  url('#{$--font-path}/iconfont.ttf') format('truetype'); /* iOS 4.1- */
+  font-weight: normal;
+  font-style: normal
+}
+[class^="dj-common-"], [class*=" dj-common-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'dj-common-' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: baseline;
+  display: inline-block;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dj-common-add-s:before {
+  content: "\e644";
+}
+
+.dj-common-calendar-s:before {
+  content: "\e647";
+}
+
+.dj-common-customservice-s:before {
+  content: "\e64c";
+}
+
+.dj-common-help-s:before {
+  content: "\e64e";
+}
+
+.dj-common-home-s:before {
+  content: "\e64f";
+}
+
+.dj-common-location-s:before {
+  content: "\e651";
+}
+
+.dj-common-message-s:before {
+  content: "\e653";
+}
+
+.dj-common-setup-s:before {
+  content: "\e659";
+}
+
+.dj-common-search-s:before {
+  content: "\e65a";
+}
+
+.dj-common-selected-s:before {
+  content: "\e65b";
+}
+
+.dj-common-show-s:before {
+  content: "\e65e";
+}
+
+.dj-common-shoppingcart-s:before {
+  content: "\e660";
+}
+
+.dj-common-msg_icon_massage:before {
+  content: "\e601";
+}
+
+.dj-common-msg_icon_product:before {
+  content: "\e602";
+}
+
+.dj-common-msg_icon_customer:before {
+  content: "\e603";
+}
+
+.dj-common-msg_icon_service:before {
+  content: "\e604";
+}
+
+.dj-common-back:before {
+  content: "\e694";
+}
+
+.dj-common-add-n:before {
+  content: "\e695";
+}
+
+.dj-common-close:before {
+  content: "\e696";
+}
+
+.dj-common-calendar-n:before {
+  content: "\e697";
+}
+
+.dj-common-downarrow:before {
+  content: "\e698";
+}
+
+.dj-common-customservice-n:before {
+  content: "\e699";
+}
+
+.dj-common-ewm:before {
+  content: "\e69a";
+}
+
+.dj-common-help-n:before {
+  content: "\e69b";
+}
+
+.dj-common-location-n:before {
+  content: "\e69c";
+}
+
+.dj-common-home-n:before {
+  content: "\e69d";
+}
+
+.dj-common-hide:before {
+  content: "\e69e";
+}
+
+.dj-common-rightarrow:before {
+  content: "\e69f";
+}
+
+.dj-common-more:before {
+  content: "\e6a0";
+}
+
+.dj-common-message-n:before {
+  content: "\e6a1";
+}
+
+.dj-common-search-n:before {
+  content: "\e6a3";
+}
+
+.dj-common-setup-n:before {
+  content: "\e6a4";
+}
+
+.dj-common-shoppingcart-n:before {
+  content: "\e6a5";
+}
+
+.dj-common-sort:before {
+  content: "\e6a6";
+}
+
+.dj-common-show-n:before {
+  content: "\e6a7";
+}
+
+.dj-common-rttop:before {
+  content: "\e6a2";
+}
+
+.dj-common-unfold:before {
+  content: "\e6a8";
+}
+
+.dj-common-addalter:before {
+  content: "\e6a9";
+}
+
+.dj-common-sort1:before {
+  content: "\e6aa";
+}
+
+.dj-common-client-n:before {
+  content: "\e6ac";
+}
+
+.dj-common-delete-n:before {
+  content: "\e6ad";
+}
+
+.dj-common-setup-n1:before {
+  content: "\e6ae";
+}
+
+.dj-common-switch-n:before {
+  content: "\e6af";
+}
+
+.dj-common-delete-s:before {
+  content: "\e6b0";
+}
+
+.dj-common-upload-n:before {
+  content: "\e6b1";
+}
+
+.dj-common-delete:before {
+  content: "\e6b2";
+}
+
+.dj-common-success:before {
+  content: "\e6b3";
+}
+
+.dj-common-red-delete:before {
+  content: "\e606";
+}
+
+.dj-common-solid-sort:before {
+  content: "\e607";
+}
+
+.dj-common-save-n:before {
+  content: "\e608";
+}
+
+.dj-common-save-s:before {
+  content: "\e6b4";
+}
+
+.dj-common-Nodata:before {
+  content: "\e609";
+}
+
+.dj-common-document:before {
+  content: "\e60a";
+}
+
+.dj-common-Export:before {
+  content: "\e60b";
+}

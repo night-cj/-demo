@@ -1,0 +1,12 @@
+// .stylelintignore
+*.js
+*.png
+*.eot
+*.ttf
+*.woff
+test
+src/assets/font-awesome
+src/assets/iconfont
+examples/assets/styles/fonts
+iconfont
+dist

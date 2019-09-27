@@ -1,0 +1,25 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include block(el-pagination) {
+  font-weight: $--djPaging-elPagination-font-weight;
+
+  @include el((btn-prev, btn-next, el-pager, number, 'el-icon.more')) {
+    min-width: $--djPaging-min-width;
+    padding: $--djPaging-icon-padding;
+    text-align: center;
+    box-sizing: border-box;
+
+    @extend span:not([class*=suffix]);
+  }
+  span:not([class*=suffix]) {
+    height: $--djPaging-height;
+    line-height: $--djPaging-height;
+  }
+  @include el(number) {
+    margin: $--djPaging-number;
+  }
+  .el-select .el-input__inner {
+    height: $--djPaging-elInput-inner;
+  }
+}

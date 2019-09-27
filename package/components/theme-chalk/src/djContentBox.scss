@@ -1,0 +1,48 @@
+@import "mixins/mixins";
+@import "common/var";
+@include block(dj-content-box) {
+  @include setPosition(absolute);
+  // @include size(100%, 100%);
+  @include box-center();
+  width: calc(100% - 16px);
+  height: 100%;
+  padding-bottom: 32px;
+  margin: 0 8px;
+  box-sizing: border-box;
+  @include mod(inside) {
+    @include setPosition(relative);
+    @include box-center(null,null,column);
+    width: 100%;
+    height: 100%;
+    background: $--djContentBox-inside-bgColor;
+    // border-radius: $--djContentBox-inside-border-radius;
+    &-content {
+      flex-grow: 1;
+      @include setPosition(relative);
+      // padding: 10px;
+      // overflow: auto;
+    }
+  }
+  @include mod(copyright) {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    color: $--color-text-secondary;
+  }
+  @include el(box-header) {
+    @include size(null, 39px);
+    @include setCommon($--djContentBox-boxHeader-font,39px);
+    padding: 6px;
+    font-weight: $--djContentBox-boxHeader-font-weight;
+    border-bottom: $--djContentBox-boxHeader-border-bottom;
+    border-left: $--djContentBox-boxHeader-border-left;
+  }
+  @include mod(footer) {
+    text-align: center;
+    font-size: 14px;
+    color: #909399;
+  }
+}

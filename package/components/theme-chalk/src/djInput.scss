@@ -1,0 +1,22 @@
+@import 'common/var';
+@import 'mixins/mixins';
+
+@include block(dj-input) {
+  position: relative;
+
+  @include mod(subscript) {
+    margin: $--djInput-subscript-margin;
+    font-size: $--djInput-subscript-font;
+    line-height: $--djInput-subscript-lineHeight;
+    text-align: right;
+  }
+  @include el(suffix-label) {
+    @include setPosition(relative, top -2px);
+    @include box-center(center, center);
+    @include size(null, 100%);
+  }
+
+  @include el(el-autocomplete) {
+    display: block;
+  }
+}

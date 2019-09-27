@@ -1,0 +1,76 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include block(dj-search) {
+  @include size(100%);
+  font-size: $--djSearch-font-size;
+
+  @include mod(query) {
+    @include size(null, $--djSearch-query-height);
+    overflow: auto;
+    font-size: $--djSearch-query-font-size;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    @include mod(item) {
+      display: inline-block;
+      margin-right: $--djSearch-query-item-margin-right;
+      & > div {
+        display: inline-block;
+        @include size($--djSearch-query-item-icon-width, $--djSearch-query-item-icon-height);
+        margin-right: 3px;
+        border: $--djSearch-query-item-icon-border;
+      }
+      span {
+        color: $--djSearch-query-item-color;
+      }
+    }
+  }
+
+  @include mod(content) {
+    @include setPosition(absolute,top 0 left 0, 100);
+    @include size(100%);
+    transition: all 0.5s;
+
+    @include mod(condition) {
+      background-color: $--djSearch-condition-full-color;
+      // border-bottom: $--djSearch-condition-border;
+      & > div {
+        display: inline-block;
+        padding: 10px 10px 0;
+      }
+
+      @include mod(item) {
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      @include mod(button) {
+        float: right;
+        margin-bottom: 10px;
+        text-align: right;
+        button {
+          padding: 10px 30px;
+        }
+      }
+    }
+  }
+
+  @include mod(mask) {
+    background: rgba(0, 0, 0, 0.45);
+
+    @include setPosition(absolute,top 0 left 0, 100);
+    @include size(100%,100%);
+  }
+  .dj-item-box-label {
+    width: 120px;
+  }
+  .dj-item-box-value {
+    padding-right: 8px;
+    width: calc(100% - 128px);
+    .el-select {
+      width: 100%;
+    }
+  }
+}

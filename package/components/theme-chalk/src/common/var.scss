@@ -1,0 +1,220 @@
+/* Transition
+-------------------------- */
+$--all-transition: all 0.5s !default;
+$--fade-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
+$--fade-linear-transition: opacity 200ms linear !default;
+$--md-fade-transition: transform 300ms linear !default;
+$--border-transition-base: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !default;
+$--color-transition-base: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !default;
+/* 色彩
+-------------------------- */
+$--color-base: #38adff !default;
+$--color-primary: #3654ea !default;
+/// color|1|Background Color|4
+$--color-white: #fff !default;
+/// color|1|Background Color|4
+$--color-black: #000 !default;
+$--color-success: #40b317 !default;
+$--color-warning: #f89816 !default;
+$--color-danger: #f00 !default;
+$--color-info: #909399 !default;
+// 文字颜色
+$--color-text-primary: #303133 !default;
+$--color-text-regular: #606266 !default;
+$--color-text-secondary: #909399 !default;
+$--color-text-placeholder: #c0c4cc !default;
+$--border-color-base: #dcdfe6 !default;
+$--border-color-light: #ebeef5 !default;
+$--border-color-lighter: #ebeef5 !default;
+$--border-color-extra-light: #ebeef5 !default;
+$--border-color-button: #a3aee7 !default;
+// 背景颜色
+$--background-color-base: #f5f7fa !default;
+$--background-color-button: #dbe1ea !default;
+$--background-color-body: #f0faf5 !default;
+$--background-color-table: #fafafa !default;
+$--background-color-hover: #f8f9fd !default;
+$--background-color-warning: #fcf2e6 !default;
+$--dj-background-base-hover: #b6d9ff;
+// status
+$--color-minor: #e7ebff !default;
+$--color-hover: #526df6 !default;
+$--color-active: #3f55c2 !default;
+$--color-danger-hover: #ff4e4e !default;
+$--color-danger-active: #e85657 !default;
+// masking
+$--masking-color-suspension: rgba(0, 0, 0, 0.75) !default;
+$--masking-color-alert: rgba(0, 0, 0, 0.45) !default;
+$--masking-color-scroll: rgba(0, 0, 0, 0.15) !default;
+$--masking-color-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06) !default;
+/* Link
+-------------------------- */
+$--link-base-color: $--color-primary !default;
+$--link-hover-color: $--color-hover !default;
+/* Border
+-------------------------- */
+$--border-width-base: 1px !default;
+$--border-style-base: solid !default;
+$--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
+$--border-radius-primary: 5px !default;
+$--border-radius-base: 4px !default;
+$--border-radius-small: 2px !default;
+$--border-radius-circle: 100% !default;
+$--border-radius-zero: 0 !default;
+
+// Box-shadow
+$--box-shadow-base: 0 2px 12px 0 rgba(0, 0, 0, 0.06) !default;
+$--box-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12) !default;
+$--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.06) !default;
+/* Fill
+-------------------------- */
+$--fill-base: $--color-white !default;
+/* 字体
+-------------------------- */
+$--font-path: 'fonts' !default;
+$--font-size-head-super-large: 38px !default;
+$--font-size-head-extra-large: 30px !default;
+$--font-size-head-large: 24px !default;
+$--font-size-extra-large: 20px !default;
+$--font-size-large: 18px !default;
+$--font-size-extra-medium: 17px !default;
+$--font-size-medium: 16px !default;
+$--font-size-base: 14px !default;
+$--font-size-small: 13px !default;
+$--font-size-extra-small: 12px !default;
+$--font-size-super-small: 10px !default;
+$--font-weight-primary: 500 !default;
+$--font-weight-secondary: 100 !default;
+$--font-line-height-base: initial !default;
+$--font-line-height-primary: 24px !default;
+$--font-line-height-secondary: 16px !default;
+$--font-color-disabled-base: #909399 !default;
+/* Size
+-------------------------- */
+$--size-base: 14px !default;
+/* z-index
+-------------------------- */
+$--index-normal: 1 !default;
+$--index-top: 1000 !default;
+$--index-popper: 2000 !default;
+/* Disable base
+-------------------------- */
+$--disabled-fill-base: $--background-color-button !default;
+$--disabled-fill-input-base: $--background-color-base !default;
+$--disabled-color-base: $--color-text-secondary !default;
+$--disabled-border-base: $--border-color-base !default;
+/* 宽高
+-------------------------- */
+$--base-width: 100% !default;
+$--base-height: 100% !default;
+$--primary-width: auto !default;
+$--primary-height: auto !default;
+// input
+$--djInput-subscript-margin: 3px 0 0 0 !default;
+$--djInput-subscript-font: $--font-size-extra-small !default;
+$--djInput-subscript-lineHeight: 12px;
+// select
+
+// djCheckBox
+$--djCheckBox-margin-right: 30px !default;
+
+// djTimePicker
+$--djTimePicker-elInput-width: 100px !default;
+
+// baseTable
+$--baseTable-scroll-hasY: calc(100% - 16px) !default;
+$--baseTable-elTableBody-width: $--base-width !default;
+$--baseTable-TContainer-width: $--base-width !default;
+$--baseTable-scroll-width: $--base-width !default;
+$--baseTable-bodyWrapper-width: $--primary-width !default;
+$--baseTable-bodyWrapper-minWidth: $--base-width !default;
+$--baseTable-empty-min-height: 60px !default;
+$--baseTable-empty-text-line-height: $--baseTable-empty-min-height;
+$--baseTable-suffix-container-line-height: $--font-line-height-base;
+$--baseTable-btnGroup-color: $--link-base-color !default;
+$--baseTable-btnGroup-delimiter-color: $--border-color-extra-light !default;
+$--baseTable-btnGroup-link-disabled-color: $--color-text-secondary !default;
+$--baseTable-btnGroup-link-danger-color: $--color-danger !default;
+$--baseTable-tipTxt-width: 20px !default;
+$--baseTable-tipTxt-height: 20px !default;
+$--baseTable-tipTxt-color: $--color-white !default;
+$--baseTable-tipTxt-border-radius: $--border-radius-primary !default;
+$--baseTable-drag-border: 2px dashed $--color-danger !default;
+
+// djTable
+
+// djPaging
+$--djPaging-elPagination-font-weight: normal !default;
+$--djPaging-height: 32px !default;
+$--djPaging-min-width: 32px !default;
+$--djPaging-icon-padding: 0 5px !default;
+$--djPaging-elInput-inner: 30px !default;
+$--djPaging-number: 0 2px !default;
+
+// djSearch
+$--djSearch-font-size: $--font-size-base !default;
+$--djSearch-query-height: 20px !default;
+$--djSearch-query-font-size: $--font-size-super-small !default;
+$--djSearch-query-item-margin-right: 10px !default;
+$--djSearch-query-item-icon-width: 7px !default;
+$--djSearch-query-item-icon-height: 7px !default;
+$--djSearch-query-item-icon-border: 2px solid $--color-primary !default;
+$--djSearch-query-item-color: $--color-primary !default;
+$--djSearch-condition-border: $--border-base !default;
+$--djSearch-condition-full-color: $--color-white !default;
+$--djSearch-conSwitch-color: $--color-white !default;
+$--djSearch-conSwitch-bgColor: $--color-primary !default;
+$--djSearch-conSwitch-border-radius: 0 0 7px 7px !default;
+
+// djPicturePreview
+$--djPicturePreview-bgColor: #99a9bf !default;
+$--djPicturePreview-operate-color: $--color-white !default;
+$--djPicturePreview-operate-bgColor: hsla(0, 0%, 60%, 0.6) !default;
+$--djPicturePreview-operate-transition: $--md-fade-transition !default;
+$--djPicturePreview-operate-icon-font: $--font-size-large !default;
+$--djPicturePreview-operate-hover-color: #3a8ee6 !default;
+
+// djForm
+$--djForm-wordsCount-font: $--font-size-extra-small !default;
+$--djForm-wordsCount-line-height: 16px !default;
+$--djForm-wordsCount-color: #b1b1b1 !default;
+$--djForm-input-width: 232px !default;
+
+// djMultipleCheckbox
+$--djMultipleCheckbox-title-font: $--font-size-medium !default;
+$--djMultipleCheckbox-title-color: $--color-text-regular !default;
+$--djMultipleCheckbox-border: 1px solid $--border-color-light !default;
+$--djMultipleCheckbox-hover: $--background-color-hover !default;
+$--djMultipleCheckbox-elTable-bgColor: $--border-color-light !default;
+$--djMultipleCheckbox-elTable-td-font: $--size-base !default;
+$--djMultipleCheckbox-elTable-td-color: $--color-text-regular !default;
+
+// djContentBox
+$--djContentBox-inside-bgColor: $--color-white !default;
+$--djContentBox-inside-border-radius: 8px !default;
+$--djContentBox-boxHeader-font: $--font-size-medium !default;
+$--djContentBox-boxHeader-font-weight: bold !default;
+$--djContentBox-boxHeader-border-bottom: 2px solid #b0b0b0 !default;
+$--djContentBox-boxHeader-border-left: 4px solid #38adff !default;
+// djSelectBox
+$--djSelectBox-label-color: $--color-danger;
+$--djSelectBox-value-font: $--font-size-medium;
+$--djSelectBox-value-border: $--border-base;
+$--djSelectBox-value-border-radius: $--border-radius-base;
+$--djSelectBox-button-bgColor: $--background-color-base;
+$--djSelectBox-button-bgColor-hover: $--border-color-base;
+$--djSelectBox-boardBox-bgColor: $--color-white;
+$--djSelectBox-boardBox-border: $--border-base;
+$--djSelectBox-boardBox-border-radius: $--border-radius-base;
+$--djSelectBox-popperArrow-border: 6px solid transparent;
+$--djSelectBox-popperArrow-border-bottom: $--border-color-base;
+$--djSelectBox-borderColor: #d6d6d6 !default;
+$--djSelectBox-tabHoverDarkColor: #c5c7ce !default;
+
+// itemBox
+$--itembox-label-line-height: 36px;
+
+// djGialog
+$--sh: 438px !default;
+$--mh: 558px !default;
+$--lh: 738px !default;

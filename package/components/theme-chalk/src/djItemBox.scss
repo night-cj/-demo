@@ -1,0 +1,26 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include block(dj-item-box) {
+  display: inline-block;
+  width: 100%;
+  & > div {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  @include mod(label) {
+    padding-right: 8px;
+    overflow: hidden;
+    line-height: $--itembox-label-line-height;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+    text-align: right;
+    width: 120px;
+  }
+
+  @include mod(value) {
+    width: calc(100% - 120px);
+  }
+}

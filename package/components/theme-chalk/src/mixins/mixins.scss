@@ -1,0 +1,77 @@
+@import "function";
+@import "../common/var";
+@import 'utils';
+/* BEM
+ -------------------------- */
+@mixin block($block) {
+  $BLOCK: $block !global;
+  .#{$BLOCK} {
+    @content;
+  }
+}
+// 元素是块的子节点。为了表明某个东西是一个元素(.父级$eleSeparator参数1,.父级$eleSeparator参数2,.父级$eleSeparator参数3...)
+@mixin eMixin($element, $eleSeparator: $elementSeparator) {
+  $selector: &;
+  $currentSelector: "";
+
+  @each $unit in $element {
+    $currentSelector: #{$currentSelector + "." + $BLOCK + $eleSeparator + $unit + ","};
+  }
+
+  @if hitAllSpecialNestRule($selector) {
+    @at-root {
+      #{$selector} {
+        #{$currentSelector} {
+          @content;
+        }
+      }
+    }
+  } @else {
+    @at-root {
+      #{$currentSelector} {
+        @content;
+      }
+    }
+  }
+}
+// .参数1,.参数2,...
+@mixin el($element) {
+  $selector: &;
+  $currentSelector: "";
+
+  @each $unit in $element {
+    $currentSelector: #{$currentSelector + "." + $unit + ","};
+  }
+
+  @if hitAllSpecialNestRule($selector) {
+    @at-root {
+      #{$selector} {
+        #{$currentSelector} {
+          @content;
+        }
+      }
+    }
+  } @else {
+    @at-root {
+      #{$currentSelector} {
+        @content;
+      }
+    }
+  }
+}
+
+// 修饰符是改变某个块的外观的标志。要使用修饰符(&-参数1,&-参数2,&-参数3...)
+@mixin mod($modifier) {
+  $selector: &;
+  $currentSelector: "";
+
+  @each $unit in $modifier {
+    $currentSelector: #{$currentSelector + & + $modifierSeparator + $unit + ","};
+  }
+
+  @at-root {
+    #{$currentSelector} {
+      @content;
+    }
+  }
+}

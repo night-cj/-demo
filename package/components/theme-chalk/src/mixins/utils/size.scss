@@ -1,0 +1,12 @@
+// 宽高 @include size (2,3,null,5)
+@mixin size($width:null,$height:null,$min-w:null,$min-h:null,$max-w: null,$max-h: null) {
+  @if ($width!="" & & $width!=null) { width: $width; }
+
+  @if ($height!="" & & $height!=null) { height: $height; }
+
+  @if ($min-w!="" & & $min-w!=null) { min-width: $min-w; }
+
+  @if ($min-h!="" & & $min-h!=null) { min-width: $min-h; }
+  @if ($max-w!="" & & $max-w!=null) { max-width: $max-w; }
+  @if ($max-h!="" & & $max-h!=null) { max-height: $max-h; }
+}

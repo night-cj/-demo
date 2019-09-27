@@ -1,0 +1,49 @@
+@import "mixins/mixins";
+@import "common/var";
+@include block(el-dialog__wrapper) {
+  @include box-center(flex-start, center);
+  @include block(el-dialog) {
+    @include size(auto);
+    @include eMixin(body, '__') {
+      padding: 0;
+      [class*="el-col-"] {
+        padding: 0 10px;
+      }
+      .dj-dialog-content {
+        padding-top: 16px;
+        .dj-scroll-box {
+          .el-scrollbar {
+            position: relative;
+            .el-scrollbar__wrap {
+              overflow-x: scroll;
+              padding:0 10px;
+              @media screen and (max-width: 1366px) {
+                max-height: $--sh;
+              }
+              @media screen and (min-width: 1367px) and (max-width: 1600px){
+                max-height: $--mh;
+              }
+              @media screen and(min-width: 1601px) and (max-width: 1920px) {
+                max-height: $--lh;
+              }
+            }
+            .el-scrollbar__bar.is-horizontal {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .dj-dialog-footer {
+    display: flex;
+    justify-content: flex-end;
+    .el-button {
+      padding: 10px 0;
+      width: 88px;
+    }
+    .el-button + .el-button {
+      margin-left: 8px;
+    }
+  }
+}

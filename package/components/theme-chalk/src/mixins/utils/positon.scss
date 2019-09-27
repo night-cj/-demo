@@ -1,0 +1,14 @@
+// 绝对定位 @include setPosition(absolute,top 0 right 0, 200);
+@mixin setPosition($position,$args:null,$zIndex:null) {
+  position: $position;
+  @if $args!="" & & $args!=null {
+    @each $o in top right bottom left {
+      $i: index($args, $o);
+  
+      @if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number {
+        #{$o}: nth($args, $i + 1);
+      }
+    }
+  }
+  @if $zIndex!="" & & $zIndex!=null { z-index: $zIndex; }
+}

@@ -1,0 +1,18 @@
+@import 'common/var';
+@import 'mixins/mixins';
+
+@include block(time-range) {
+  .el-date-editor.el-input {
+    width: $--djTimePicker-elInput-width;
+  }
+}
+.date-dup, .date-range, .time-range {
+  display: flex;
+  align-items: center;
+  .el-date-editor {
+    width: 100%;
+  }
+  .connect-line {
+    color: $--color-text-regular;
+  }
+}

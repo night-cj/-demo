@@ -1,0 +1,54 @@
+@import "mixins/mixins";
+@import "common/var";
+
+@include block(dj-picture-preview) {
+  @include setPosition(relative);
+  overflow: hidden;
+  background-color: $--djPicturePreview-bgColor;
+  user-select: none;
+
+  @include size(100%, 100%);
+
+  @include el(pic-wrapper) {
+    transition: 70ms ease-out;
+
+    @include size(100%, 100%);
+    @include setPosition(absolute,top 50% left 50%);
+    img {
+      cursor: pointer;
+      transform: translate(-50%, -50%);
+
+      @include size(null, null, null, null, 100%, 100%);
+      @include setPosition(absolute,top 50% left 50%);
+    }
+  }
+
+  @include eMixin(operate) {
+    padding: 5px 0;
+    color: $--djPicturePreview-operate-color;
+    text-align: center;
+    background: $--djPicturePreview-operate-bgColor;
+    transform: translateY(100%);
+    transition: $--djPicturePreview-operate-transition;
+
+    @include size(100%);
+    @include setPosition(absolute,bottom 0,3);
+    i {
+      margin: 0 5px;
+      font-size: $--djPicturePreview-operate-icon-font;
+      cursor: pointer;
+      &:hover {
+        color: $--djPicturePreview-operate-hover-color;
+      }
+    }
+  }
+  &:hover .dj-picture-preview_operate {
+    transform: translateY(0);
+  }
+  @include el(el-carousel) {
+    @include size(null, 100%);
+    .el-carousel__indicators {
+      bottom: 26px;
+    }
+  }
+}

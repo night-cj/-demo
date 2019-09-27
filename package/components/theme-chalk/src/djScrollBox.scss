@@ -1,0 +1,13 @@
+@import "mixins/mixins";
+@import "common/var";
+@include block(dj-scroll-box) {
+  @include setPosition(relative);
+  @include size(100%, 100%);
+  @include block(el-scrollbar) {
+    @include setPosition(absolute);
+    @include size(100%, 100%);
+    @include eMixin(wrap, '__') {
+      overflow-x: hidden;
+    }
+  }
+}

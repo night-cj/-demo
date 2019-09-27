@@ -1,0 +1,40 @@
+@import "mixins/mixins";
+@import "common/var";
+@include block(dj-form) {
+  margin-bottom: 0;
+  @include block(el-form-item) {
+    margin-bottom: 20px;
+    margin-top: 4px;
+    line-height: 34px;
+    padding-right: 8px;
+    @include eMixin(label, '__') {
+      margin: 0;
+    }
+  }
+  @include el((dj-input-content, el-select,el-cascader,date-range)) {
+    width: $--djForm-input-width;
+  }
+  .el-date-editor.el-input {
+    width: $--djForm-input-width;
+  }
+  @include el(el-textarea__inner) {
+    resize: none;
+  }
+  @include block(el-radio) {
+    & + .el-radio {
+      margin-left: 2px;
+    }
+    @include eMixin(label, '__') {
+      padding-left: 2px;
+    }
+    @include eMixin(content, '__') {
+      position: relative;
+      width: calc(100% - 100px);
+    }
+  }
+}
+.wordsCount {
+  @include setPosition(absolute, right 10 bottom 10);
+  @include setCommon($--font-size-extra-small, $--djForm-wordsCount-line-height, $--djForm-wordsCount-color);
+  display: inline-block;
+}

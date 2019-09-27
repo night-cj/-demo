@@ -1,0 +1,18 @@
+/// //SCSS
+/// .justify-center {
+///     @include box-center;
+/// }
+
+/// //CSS
+/// .justify-cnter {
+///     display: flex;
+///     justify-content: center;
+///     align-items: center;
+/// }
+@mixin box-center( $align: null, $justify:null, $flex:null, $alignSelf: null) {
+  display: flex;
+  @if ($align!="" & & $align!=null) { align-items: $align; }
+  @if ($justify!="" & & $justify!=null) { justify-content: $justify; }
+  @if ($flex!="" & & $flex!=null) { flex-direction: $flex; }
+  @if ($alignSelf!="" & & $alignSelf!=null) { align-self: $alignSelf; }
+}

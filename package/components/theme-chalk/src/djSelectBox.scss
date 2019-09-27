@@ -1,0 +1,80 @@
+@import "mixins/mixins";
+@import "common/var";
+// .el-icon-error {
+//   color: rgba(255, 0, 0, 0.3);
+// }
+@include block(dj-select-box) {
+  @include setPosition(relative);
+  display: inline-block;
+  cursor: default;
+  & > div {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  @include mod(label) {
+    i {
+      @include setPosition(absolute, top 10 left -8);
+      color: $--djSelectBox-label-color;
+    }
+  }
+  @include mod(value) {
+    @include mod(content) {
+      @include setPosition(relative);
+      @include size(null, 32px);
+      font-size: $--djSelectBox-value-font;
+      border: $--djSelectBox-value-border;
+      border-radius: $--djSelectBox-value-border-radius;
+      @include mod((left, button)) {
+        display: inline-block;
+        @include size(null, 100%);
+        padding: 0 10px;
+        line-height: 32px;
+        vertical-align: middle;
+        box-sizing: border-box;
+      }
+      @include mod(button) {
+        cursor: pointer;
+        background-color: $--djSelectBox-button-bgColor;
+        &:hover {
+          background-color: $--djSelectBox-button-bgColor-hover;
+        }
+      }
+    }
+    @include mod(board) {
+      @include setPosition(absolute, top 43, 100);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+      @include mod(box) {
+        padding: 10px;
+        background-color: $--djSelectBox-boardBox-bgColor;
+        border: $--djSelectBox-boardBox-border;
+        border-radius: $--djSelectBox-boardBox-border-radius;
+        @include mod(content) {
+          @include setPosition(relative);
+          flex-grow: 1;
+          @include mod(defualt) {
+            @include setPosition(relative);
+            @include size(100px,100px);
+            padding: 6px;
+            overflow: auto;
+            border: $--djSelectBox-boardBox-border;
+            box-sizing: border-box;
+          }
+        }
+      }
+      @include el(popper-arrow) {
+        @include setPosition(absolute, top -5 left 20);
+        @include size(0);
+        border: $--djSelectBox-popperArrow-border;
+        border-bottom-color: $--djSelectBox-popperArrow-border-bottom;
+        border-top-width: 0;
+        &::after {
+          @include setPosition(absolute, top 1 left -6);
+          border: $--djSelectBox-popperArrow-border;
+          border-bottom-color: $--color-white;
+          border-top-width: 0;
+          content: '';
+        }
+      }
+    }
+  }
+}
